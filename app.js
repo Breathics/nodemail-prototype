@@ -1,9 +1,5 @@
 // Require modules
-const express = require('express');
 const nodemailer = require('nodemailer');
-
-const app = express();
-const PORT = 3000;
 
 // If you're going to use your own email
 // You may have to allow less secure apps
@@ -20,9 +16,9 @@ const transporter = nodemailer.createTransport({
 
 
 const mailOptions = {
-  from: 'EMAIL BEING SENT FROM',
-  to: 'EMAIL BEING SENT TO',
-  subject: 'Check it out',
+  from: 'EMAIL COMING FROM AUTH', // May not even need to include it here
+  to: 'EMAIL SENDING TO',
+  subject: 'It works',
   text: 'Sup doood'
 };
 
@@ -32,10 +28,5 @@ transporter.sendMail(mailOptions, (error, info) => {
   } else {
     console.log('Email sent successfully' + info.response);
   }
-});
-
-
-app.listen(PORT, () => {
-  console.log("Firing up something hot on PORT: ", PORT);
 });
 
