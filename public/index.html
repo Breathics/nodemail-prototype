@@ -7,10 +7,29 @@
   <title>Node Mailer</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="           crossorigin="anonymous">
   </script>
+  <script>
+    // Create an ajax form that will interact with the Nodemailer route
+  
+  </script>
+  <style>
+    form > * {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <form>
-
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName">
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName">
+    <label for="subject">Subject</label>
+    <input type="text" name="subject">
+    <label for="subject">Email</label>
+    <input type="email" name="email">
+    <label for="message">Message</label>
+    <input type="text" name="message">
+    <button type="button">Send Email</button>    
   </form>
 </body>
 </html>
