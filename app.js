@@ -1,6 +1,7 @@
 // Require modules
 const express = require('express');
 const nodemailer = require('nodemailer');
+const path = require('path');
 const { USERNAME, PASSWORD } = require('./config.js');
 
 const app = express();
@@ -24,6 +25,10 @@ const transporter = nodemailer.createTransport({
     user: USERNAME,     
     pass: PASSWORD  
   }                             
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // HTTP POST route to accept POST data from 
