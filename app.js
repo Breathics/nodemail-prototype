@@ -28,8 +28,8 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+  res.sendFile(path.join(__dirname, 'public',))
+})
 
 // HTTP POST route to accept POST data from 
 app.post('/email', (req, res) => {
@@ -49,7 +49,7 @@ app.post('/email', (req, res) => {
       console.log('Email sent successfully' + info.response);
     }
   });
-
+  res.end();
 });
 
 
